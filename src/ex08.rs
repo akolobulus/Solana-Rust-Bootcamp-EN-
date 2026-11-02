@@ -33,6 +33,7 @@ impl BankAccount {
     ///
     /// Return `BankError::ZeroAmount` for a zero deposit. A successful deposit
     /// appends `"deposit <amount>"` to the history.
+    ///function
     pub fn deposit(&mut self, amount: u64) -> Result<(), BankError> {
         if amount == 0 {
             return Err(BankError::ZeroAmount);
